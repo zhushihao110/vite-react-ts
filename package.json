@@ -33,7 +33,7 @@
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
-      "eslint",
+      "eslint --cache --fix",
       "git add"
     ],
     "src/**/*.{js,jsx}": [
