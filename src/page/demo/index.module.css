@@ -1,0 +1,10 @@
+/* @import '@/style/index.module.css'; */
+/* 可主动引入全局样式 */
+
+.box {
+  height: 200px;
+  width: 500px;
+  border: 1px solid red;
+  text-align: center;
+  margin: 0 auto;
+}
