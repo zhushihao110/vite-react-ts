@@ -1,6 +1,7 @@
 export interface StateType {
   name: string
   count: number
+  list: Array<number>
 }
 
 export interface PropsType {

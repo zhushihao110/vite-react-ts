@@ -4,9 +4,11 @@
   "scripts": {
     "dev": "vite --mode development",
     "build": "tsc && vite build --mode production",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "add": "node codeSplite/createTemplate/makeFile.js"
   },
   "dependencies": {
+    "file-save": "^0.2.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0"
   },
