@@ -1,11 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
+import { renderRoutes } from 'react-router-config'
+import routes from '@/router'
+
+// 初始化全局UI
 import './index.css'
-import App from './App'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>{renderRoutes(routes)}</BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 )

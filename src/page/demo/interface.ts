@@ -5,7 +5,7 @@ export interface StateType {
 }
 
 export interface PropsType {
-  id: number
+  id?: number
   name?: string
-  showCount: (number: number) => void
+  showCount?: (number: number) => void
 }

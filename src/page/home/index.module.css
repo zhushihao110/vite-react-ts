@@ -1,0 +1,27 @@
+.navBar {
+  height: 40px;
+  width: 300px;
+  line-height: 40px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.navBar > div {
+  height: 30px;
+  width: 90px;
+  margin-top: 4px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: 600;
+  border: 1px solid #eee;
+}
+
+.navBar > div:hover {
+  cursor: pointer;
+  background-color: skyblue;
+}
+/* .btn {
+  height: 30px;
+  width: 50px;
+  border: 1px solid #eee;
+} */

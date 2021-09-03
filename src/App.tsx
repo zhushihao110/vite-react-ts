@@ -1,16 +1,14 @@
 import React from 'react'
-import Home from '@/page/home/index'
-import Demo from '@/page/demo/index'
+import { Link } from 'react-router-dom'
 
 function App() {
   console.log(import.meta.env, '---vite---')
-  const showCount = (number: number) => {
-    alert(`number is ${number}`)
-  }
   return (
     <div className="App">
-      <Home />
-      <Demo id={1} showCount={showCount} />
+      登录页
+      <div>
+        <Link to="home">Home页</Link>
+      </div>
     </div>
   )
 }
