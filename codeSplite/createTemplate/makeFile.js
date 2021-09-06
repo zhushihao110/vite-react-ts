@@ -1,9 +1,9 @@
-// const path = require('path')
-// const { exec, execSync } = require('child_process')
-// const fileSave = require('file-save')
-import path from 'path'
-import { exec, execSync } from 'child_process'
-import fileSave from 'file-save'
+const path = require('path')
+const { exec, execSync } = require('child_process')
+const fileSave = require('file-save')
+// import path from 'path'
+// import { exec, execSync } from 'child_process'
+// import fileSave from 'file-save'
 const filename = process.argv[2]
 // const PackagePath = path.resolve(__dirname, './packages', filename)
 const PackagePath = path.resolve(__dirname, '../../src/page', filename)

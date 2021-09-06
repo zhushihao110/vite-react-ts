@@ -3,14 +3,13 @@ import { StateType, PropsType } from './interface'
 import demoClass from './index.module.css'
 
 let flag = false
-const DemoComponent: React.FC = () => {
+const DemoComponent: React.FC<PropsType> = props => {
   const [count, setCount] = useState<StateType['count']>(1)
   const [list, setList] = useState<StateType['list']>([1, 2, 3, 4, 5, 6, 7, 8])
-  console.log(demoClass)
+  console.log(props)
 
   useEffect(() => {
     if (flag) {
-      // props.showCount(count)
       document.title = `You clicked ${count} times`
     } else {
       flag = true

@@ -1,7 +1,10 @@
 import { RouteConfig } from 'react-router-config'
-import Layout from '@/page/home'
-import Demo from '@/page/demo'
-import App from '@/App'
+import { Suspense, lazy } from 'react'
+
+const Layout = lazy(() => import('@/page/layout'))
+const Home = lazy(() => import('@/page/home'))
+const Demo = lazy(() => import('@/page/demo'))
+const App = lazy(() => import('@/App'))
 
 const routerConfig: RouteConfig[] = [
   {
@@ -17,7 +20,7 @@ const routerConfig: RouteConfig[] = [
       {
         path: '/home',
         exect: false,
-        component: Layout
+        component: Home
       },
       {
         path: '/testDemo',

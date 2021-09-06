@@ -10,18 +10,7 @@ function Home(props: any) {
   const { route } = props
   return (
     <div>
-      <div className={homeCss.navBar}>
-        <div>
-          <Link to="testDemo">demo页</Link>
-        </div>
-        <div>
-          <Link to="login">登录页</Link>
-        </div>
-        <div>
-          <Link to="home">Home页</Link>
-        </div>
-      </div>
-      {renderRoutes(route.routes)}
+      <div className={homeCss.navBar}>Home页</div>
     </div>
   )
 }
