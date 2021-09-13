@@ -1,12 +1,17 @@
 import { RouteConfig } from 'react-router-config'
-import Layout from '@/page/home'
-import Demo from '@/page/demo'
-import App from '@/App'
+import { Suspense, lazy } from 'react'
+
+// React.lazy 和 Suspense 尚不可用于服务器端渲染
+// 如果要在服务器渲染的应用程序中进行代码拆分，建议使用 Loadable Components
+const Layout = lazy(() => import('@/page/layout'))
+const Home = lazy(() => import('@/page/home'))
+const Demo = lazy(() => import('@/page/demo'))
+const App = lazy(() => import('@/App'))
 
 const routerConfig: RouteConfig[] = [
   {
     path: '/login',
-    exect: false,
+    exect: true,
     component: App
   },
   {
@@ -17,7 +22,7 @@ const routerConfig: RouteConfig[] = [
       {
         path: '/home',
         exect: false,
-        component: Layout
+        component: Home
       },
       {
         path: '/testDemo',

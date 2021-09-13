@@ -1,29 +1,17 @@
 import React, { useState } from 'react'
-import * as HomeTypes from './interface'
-import { renderRoutes } from 'react-router-config'
-import { Link } from 'react-router-dom'
+import { PropsType } from './interface'
 import homeCss from './index.module.css'
+import { useStores } from '@/store/useStore'
+import { observer } from 'mobx-react'
 
-function Home(props: any) {
-  let [count, setCount] = useState<HomeTypes.countType>(1)
-  console.log(props)
-  const { route } = props
+const Home: React.FC<PropsType> = observer(props => {
+  const CounterStore = useStores('counterStore')
   return (
-    <div>
-      <div className={homeCss.navBar}>
-        <div>
-          <Link to="testDemo">demo页</Link>
-        </div>
-        <div>
-          <Link to="login">登录页</Link>
-        </div>
-        <div>
-          <Link to="home">Home页</Link>
-        </div>
-      </div>
-      {renderRoutes(route.routes)}
+    <div className={homeCss.navBar}>
+      Home页
+      <div className="red">{CounterStore.counter}</div>
     </div>
   )
-}
+})
 
 export default Home
