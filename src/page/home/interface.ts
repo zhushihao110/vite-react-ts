@@ -35,3 +35,7 @@ export interface obj {
 export interface arrayList {
   [index: number]: Object
 }
+
+export interface PropsType {
+  name?: 'home' | 'login'
+}
