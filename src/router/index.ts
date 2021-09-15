@@ -7,6 +7,7 @@ const Layout = lazy(() => import('@/page/layout'))
 const Home = lazy(() => import('@/page/home'))
 const Demo = lazy(() => import('@/page/demo'))
 const App = lazy(() => import('@/App'))
+const ImmerDemo = lazy(() => import('@/page/immerDemo/immerDemo'))
 
 const routerConfig: RouteConfig[] = [
   {
@@ -28,6 +29,11 @@ const routerConfig: RouteConfig[] = [
         path: '/testDemo',
         exect: false,
         component: Demo
+      },
+      {
+        path: '/immerDemo',
+        exect: false,
+        component: ImmerDemo
       }
     ]
   }

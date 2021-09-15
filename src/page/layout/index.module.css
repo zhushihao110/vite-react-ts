@@ -1,6 +1,6 @@
 .navBar {
   height: 40px;
-  width: 300px;
+  width: 600px;
   line-height: 40px;
   margin: 0 auto;
   display: flex;
@@ -8,7 +8,7 @@
 }
 .navBar > div {
   height: 30px;
-  width: 90px;
+  width: 120px;
   margin-top: 4px;
   text-align: center;
   line-height: 30px;
