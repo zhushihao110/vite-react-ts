@@ -19,6 +19,9 @@ const LayoutComponent: React.FC<PropsType> = props => {
         <div>
           <Link to="home">Home页</Link>
         </div>
+        <div>
+          <Link to="immerDemo">ImmerDemo</Link>
+        </div>
       </div>
       {route && renderRoutes(route.routes)}
     </div>
