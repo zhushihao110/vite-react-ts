@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { StateType, PropsType } from './immerDemoInterface'
 import { produce } from 'immer'
+import { Button } from 'antd'
 
 const ImmerDemoComponent: React.FC<PropsType> = props => {
   const [forItem, setFormItem] = useState({
@@ -33,9 +34,11 @@ const ImmerDemoComponent: React.FC<PropsType> = props => {
       <div>
         <span>age: {forItem.age}</span> <span>name: {forItem.name}</span>
       </div>
-      <button onClick={add}>增加friends</button>
+      <Button type="primary" onClick={add}>
+        增加friends
+      </Button>
       <br />
-      <button onClick={modify}>修改friends</button>
+      <Button onClick={modify}>修改friends</Button>
       <ol>{friendsList}</ol>
     </>
   )
