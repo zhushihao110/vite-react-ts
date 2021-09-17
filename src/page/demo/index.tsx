@@ -3,6 +3,7 @@ import { StateType, PropsType } from './interface'
 import demoClass from './index.module.css'
 import { useStores } from '@/store/useStore'
 import { observer } from 'mobx-react'
+import { renderRoutes } from 'react-router-config'
 
 let flag = false
 const DemoComponent: React.FC<PropsType> = observer(props => {
@@ -10,6 +11,7 @@ const DemoComponent: React.FC<PropsType> = observer(props => {
   const [count, setCount] = useState<StateType['count']>(1)
   const [list, setList] = useState<StateType['list']>([1, 2, 3, 4, 5, 6, 7, 8])
 
+  const { route } = props
   useEffect(() => {
     if (flag) {
       document.title = `You clicked ${count} times`

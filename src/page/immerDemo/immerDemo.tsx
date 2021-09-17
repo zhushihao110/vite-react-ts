@@ -38,7 +38,9 @@ const ImmerDemoComponent: React.FC<PropsType> = props => {
         增加friends
       </Button>
       <br />
-      <Button onClick={modify}>修改friends</Button>
+      <Button type="dashed" onClick={modify}>
+        修改friends
+      </Button>
       <ol>{friendsList}</ol>
     </>
   )
