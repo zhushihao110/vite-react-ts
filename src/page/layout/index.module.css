@@ -1,12 +1,4 @@
-.navBar {
-  height: 40px;
-  width: 600px;
-  line-height: 40px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
-.navBar > div {
+/* .navBar > div {
   height: 30px;
   width: 120px;
   margin-top: 4px;
@@ -14,14 +6,30 @@
   line-height: 30px;
   font-weight: 600;
   border: 1px solid #eee;
-}
+} */
 
-.navBar > div:hover {
+/* .navBar > div:hover {
   cursor: pointer;
   background-color: skyblue;
-}
+} */
 /* .btn {
     height: 30px;
     width: 50px;
     border: 1px solid #eee;
   } */
+.box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+}
+.content {
+  height: 100%;
+  width: calc(100% - 200px);
+}
+.navBar {
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  background-color: skyblue;
+}

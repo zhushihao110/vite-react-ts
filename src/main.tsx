@@ -8,6 +8,8 @@ import stores from '@/store'
 
 // 初始化全局UI
 import './index.css'
+// 引入antd样式 vite-plugin-imp
+// import 'antd/dist/antd.css'
 
 ReactDOM.render(
   <React.StrictMode>
