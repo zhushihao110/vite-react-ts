@@ -5,15 +5,24 @@ import { Button } from 'antd'
 
 const ImmerDemoComponent: React.FC<PropsType> = props => {
   const [forItem, setFormItem] = useState({
-    name: '',
-    age: '',
-    friends: ['嘿嘿', '哈哈']
+    name: 'antd',
+    age: '5',
+    friends: [
+      {
+        id: 1,
+        value: '嘿嘿'
+      },
+      {
+        id: 2,
+        value: '哈哈'
+      }
+    ]
   })
 
   const add = () => {
     setFormItem(
       produce(draftState => {
-        draftState.friends.push('洛洛')
+        draftState.friends.push({ id: Math.random() * 10, value: '洛洛' })
       })
     )
   }
@@ -21,12 +30,12 @@ const ImmerDemoComponent: React.FC<PropsType> = props => {
   const modify = () => {
     setFormItem(
       produce(draftState => {
-        draftState.friends[draftState.friends.length - 1] = '修改了，哈哈哈哈'
+        draftState.friends[draftState.friends.length - 1].value = '修改了，哈哈哈哈'
       })
     )
   }
   const friendsList = forItem.friends.map(item => {
-    return <li key="item">{item}</li>
+    return <li key={item.id}>{item.value}</li>
   })
   console.log(forItem)
   return (

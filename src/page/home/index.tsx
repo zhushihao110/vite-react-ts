@@ -9,7 +9,7 @@ const Home: React.FC<PropsType> = observer(props => {
   return (
     <div className={homeCss.navBar}>
       Home页
-      <div className="red">{CounterStore.counter}</div>
+      <div className="red">CounterStore.counter: {CounterStore.counter}</div>
     </div>
   )
 })
