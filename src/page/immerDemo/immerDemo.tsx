@@ -21,7 +21,7 @@ const ImmerDemoComponent: React.FC<PropsType> = props => {
   const modify = () => {
     setFormItem(
       produce(draftState => {
-        draftState.friends[0] = '修改了，哈哈哈哈'
+        draftState.friends[draftState.friends.length - 1] = '修改了，哈哈哈哈'
       })
     )
   }
