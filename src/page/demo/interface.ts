@@ -3,6 +3,7 @@ export interface StateType {
   name: string
   count: number
   list: Array<number>
+  flag: Boolean
 }
 
 export interface PropsType extends RouteConfigComponentProps {
