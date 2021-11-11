@@ -31,13 +31,15 @@ const routerConfig: RouteConfig[] = [
         exect: false,
         component: Home,
         key: 'Home',
-        name: 'Home'
+        name: 'Home',
+        icon: 'UserOutlined'
       },
       {
         path: '/testDemo',
         component: LayoutBox,
         key: 'TestDemo',
         name: 'TestDemo',
+        icon: 'LaptopOutlined',
         routes: [
           {
             path: '/testDemo/table',
@@ -74,7 +76,8 @@ const routerConfig: RouteConfig[] = [
         exect: false,
         key: 'ImmerDemo',
         component: ImmerDemo,
-        name: 'ImmerDemo'
+        name: 'ImmerDemo',
+        icon: 'NotificationOutlined'
       }
     ]
   }
