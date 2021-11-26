@@ -5,7 +5,7 @@
     "dev": "vite --mode development",
     "build": "tsc && vite build --mode production",
     "serve": "vite preview",
-    "add": "node codeSplite/createTemplate/makeFile.js"
+    "add": "node codeSegment/createTemplate/makeFile.js"
   },
   "dependencies": {
     "@types/react-router-config": "^5.0.3",
