@@ -15,10 +15,19 @@ const TableComponent: React.FC<PropsType> = props => {
   }
 
   const clickTimer = () => {
-    setTimeout(() => {
-      setNumber(3)
-      setNumber(4)
-    }, 0)
+    // setTimeout(() => {
+    //   setNumber(3)
+    //   setNumber(4)
+    // }, 0)
+
+    const promise = new Promise((resolve, reject) => {
+      setNumber(5)
+      setNumber(6)
+      resolve(1)
+    }).then(res => {
+      setNumber(7)
+      setNumber(8)
+    })
   }
 
   return (

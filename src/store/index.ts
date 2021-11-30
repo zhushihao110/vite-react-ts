@@ -1,6 +1,8 @@
 import counterStore from './modules/counter'
+import routerStore from './routerStore'
 
 const _store = {
+  routerStore,
   counterStore
 }
 

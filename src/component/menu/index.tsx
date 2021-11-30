@@ -1,9 +1,12 @@
 import React from 'react'
-import router from '@/router'
+// import router from '@/router'
 import { Link } from 'react-router-dom'
 import { Layout, Menu } from 'antd'
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons'
 import styles from './index.module.css'
+import { observer } from 'mobx-react'
+
+import { useStores } from '@/store/useStore'
 
 const { SubMenu } = Menu
 const { Sider } = Layout
@@ -23,7 +26,8 @@ const getIcon = (type: string | null) => {
   }
   return node
 }
-const SideBar = () => {
+const SideBar: React.FC = observer(props => {
+  const router = useStores('routerStore')
   const getSubMenu = (route: Array<any>) => {
     return route.map(item => {
       if (!item.routes) {
@@ -46,7 +50,8 @@ const SideBar = () => {
       }
     })
   }
-  const routesData = router[1].routes
+  const routesList = router.routeData
+  const routesData = routesList[1].routes
   const nodeList = getSubMenu(routesData as Array<any>)
 
   return (
@@ -57,6 +62,6 @@ const SideBar = () => {
       </Menu>
     </Sider>
   )
-}
+})
 
 export default SideBar
