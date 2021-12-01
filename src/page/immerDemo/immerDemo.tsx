@@ -4,9 +4,9 @@ import { produce } from 'immer'
 import { Button } from 'antd'
 
 const ImmerDemoComponent: React.FC<PropsType> = props => {
-  const [forItem, setFormItem] = useState({
+  const [forItem, setFormItem] = useState<StateType>({
     name: 'antd',
-    age: '5',
+    age: 5,
     friends: [
       {
         id: 1,
@@ -38,6 +38,7 @@ const ImmerDemoComponent: React.FC<PropsType> = props => {
     return <li key={item.id}>{item.value}</li>
   })
   console.log(forItem)
+
   return (
     <>
       <div>
