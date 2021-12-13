@@ -3,3 +3,4 @@ config/*
 dist
 node_modules
 .eslintcache
+codeSegment
